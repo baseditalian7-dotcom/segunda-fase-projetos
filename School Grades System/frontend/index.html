@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Grades System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <header class="header">
+            <div class="brand">
+                <div class="logo">12</div>
+                <div>
+                    <span>2 Fase de aprendizado</span>
+                    <h1>Sistema de Notas Escolares</h1>
+                </div>
+            </div>
+
+            <nav class="menu" aria-label="Menu principal">
+                <a href="#form">Notas</a>
+                <a href="#result">Resultado</a>
+                <a href="#history">Boletins</a>
+            </nav>
+        </header>
+
+        <section class="intro-grid">
+            <article class="intro-card">
+                <p>Boletim rápido</p>
+                <h2>Digite as notas e veja a média mudar na hora.</h2>
+                <span>O sistema calcula automaticamente o desempenho do aluno e muda as cores conforme o resultado.</span>
+            </article>
+
+            <article class="rule-card">
+                <small>Regra do projeto</small>
+                <strong>Média mínima: 7.0</strong>
+                <p>Maior ou igual a 7: aprovado. Abaixo de 7: reprovado.</p>
+            </article>
+        </section>
+
+        <section class="workspace">
+            <form id="gradeForm" class="panel form-panel">
+                <div class="panel-title">
+                    <span>Formulário</span>
+                    <h2>Inserir notas</h2>
+                </div>
+
+                <label>
+                    Nome do aluno
+                    <input id="studentName" type="text" placeholder="Ex: Lucas" autocomplete="off">
+                </label>
+
+                <div id="form" class="grade-grid">
+                    <label>
+                        Matemática
+                        <input class="grade-input" type="number" min="0" max="10" step="0.1" placeholder="0 a 10">
+                    </label>
+                    <label>
+                        Português
+                        <input class="grade-input" type="number" min="0" max="10" step="0.1" placeholder="0 a 10">
+                    </label>
+                    <label>
+                        História
+                        <input class="grade-input" type="number" min="0" max="10" step="0.1" placeholder="0 a 10">
+                    </label>
+                    <label>
+                        Ciências
+                        <input class="grade-input" type="number" min="0" max="10" step="0.1" placeholder="0 a 10">
+                    </label>
+                </div>
+
+                <div class="actions">
+                    <button type="submit">Adicionar boletim</button>
+                    <button id="clearButton" class="ghost" type="button">Limpar</button>
+                </div>
+            </form>
+
+            <aside id="result" class="panel result-panel waiting">
+                <div class="panel-title">
+                    <span>Resultado</span>
+                    <h2>Status do aluno</h2>
+                </div>
+
+                <div class="average-box">
+                    <small>Média</small>
+                    <strong id="averageValue">0.0</strong>
+                </div>
+
+                <div class="progress-track">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+
+                <strong id="statusText" class="status-text">Aguardando notas</strong>
+                <p id="feedbackText">Preencha as notas para calcular a média automaticamente.</p>
+            </aside>
+        </section>
+
+        <section id="history" class="panel history-panel">
+            <div class="panel-title">
+                <span>Histórico</span>
+                <h2>Boletins adicionados</h2>
+            </div>
+
+            <div id="reportList" class="report-list"></div>
+        </section>
+    </main>
+</body>
+</html>

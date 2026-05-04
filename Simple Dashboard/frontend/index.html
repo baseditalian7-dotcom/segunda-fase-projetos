@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <main class="dashboard-page">
+        <header class="main-header">
+            <div class="brand-area">
+                <div class="logo">DB</div>
+                <div>
+                    <span>Projeto 11</span>
+                    <h1>Dashboard Simples</h1>
+                </div>
+            </div>
+
+            <nav class="top-menu" aria-label="Menu do dashboard">
+                <a class="active" href="#kpis" data-menu-link="kpis">KPIs</a>
+                <a href="#results" data-menu-link="results">Resultados</a>
+                <a href="#departments" data-menu-link="departments">Setores</a>
+            </nav>
+        </header>
+
+        <section class="hero-grid">
+            <article class="hero-card">
+                <p>Painel mensal</p>
+                <h2>Visão organizada dos números principais da empresa.</h2>
+                <span>Dados simulados para praticar layout de painel, grid e cards de métricas.</span>
+            </article>
+
+            <article class="status-card">
+                <small>Status geral</small>
+                <strong>Operação saudável</strong>
+                <div class="status-line">
+                    <span></span>
+                </div>
+                <p>Meta mensal em 82% com crescimento positivo.</p>
+            </article>
+        </section>
+
+        <section id="kpis" class="kpi-grid page-section"></section>
+
+        <section id="results" class="content-grid page-section">
+            <article class="panel chart-panel">
+                <div class="panel-header">
+                    <div>
+                        <span>Resultados</span>
+                        <h2>Receita por semana</h2>
+                    </div>
+                    <strong id="totalRevenueText">R$ 0</strong>
+                </div>
+                <div id="barChart" class="bar-chart"></div>
+            </article>
+
+            <article class="panel summary-panel">
+                <span>Resumo rápido</span>
+                <h2 id="summaryTitle">Carregando...</h2>
+                <p id="summaryText">Os dados simulados serão exibidos aqui.</p>
+                <div class="mini-grid" id="miniSummary"></div>
+            </article>
+        </section>
+
+        <section id="departments" class="panel page-section">
+            <div class="panel-header">
+                <div>
+                    <span>Setores</span>
+                    <h2>Performance por área</h2>
+                </div>
+            </div>
+
+            <div class="department-grid" id="departmentGrid"></div>
+        </section>
+    </main>
+</body>
+</html>
