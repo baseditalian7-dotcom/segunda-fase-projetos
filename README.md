@@ -33,10 +33,21 @@ Pasta:
 School Grades System/
 ```
 
+### 13. Customer List CRUD
+
+Lista de clientes com cadastro, edição, remoção, busca dinâmica, contadores e persistência no navegador.
+
+Pasta:
+
+```text
+Customer List CRUD/
+```
+
 ## Estrutura
 
 ```text
 2 Fase de aprendizado(Projetos)/
+├── Customer List CRUD/
 ├── Simple Dashboard/
 ├── School Grades System/
 └── README.md
